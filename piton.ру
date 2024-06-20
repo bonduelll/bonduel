@@ -1,0 +1,67 @@
+number = int(input("Введите целое число: "))
+if number % 2 == 0:
+    print("Число", number, "является четным.")
+else:
+    print("Число", number, "является нечетным.")
+
+nums = list(map(int, input("Введите три числа через пробел: ").split()))
+max_num = max(nums)
+print("Максимальное число:", max_num)
+
+n = int(input("Введите целое неотрицательное число: "))
+factorial = 1
+for i in range(1, n+1):
+    factorial *= i
+print("Факториал числа:", factorial)
+
+num = int(input("Введите целое число больше 1: "))
+if num > 1:
+    for i in range(2, num):
+        if num % i == 0:
+            print("Число не является простым")
+            break
+    else:
+        print("Число является простым")
+else:
+    print("Введите число больше 1")
+
+    num = int(input("Введите число для таблицы умножения: "))
+for i in range(1, 11):
+    print(num, "x", i, "=", num*i)
+
+    word = input("Введите строку: ").replace(" ", "").lower()
+if word == word[::-1]:
+    print("Это палиндром")
+else:
+    print("Это не палиндром")
+
+sentence = input("Введите строку: ")
+vowels = "aeiou"
+consonants = "bcdfghjklmnpqrstvwxyz"
+vowel_count = sum(1 for char in sentence if char.lower() in vowels)
+consonant_count = sum(1 for char in sentence if char.lower() in consonants)
+print("Количество гласных:", vowel_count)
+print("Количество согласных:", consonant_count)
+
+numbers = [1, 2, 3, 4, 5]
+sum_numbers = sum(numbers)
+print("Сумма элементов списка:", sum_numbers)
+
+n = int(input("Введите натуральное число: "))
+for i in range(n, 0, -1):
+    print(i)
+    
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i)
+    
+    
+    
+
+
