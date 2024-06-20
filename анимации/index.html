@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Color Change Animation</title>
+<style>
+    .cube {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation: colorChange 5s infinite;
+    }
+
+    @keyframes colorChange {
+        0% { background-color: red; }
+        20% { background-color: orange; }
+        40% { background-color: yellow; }
+        60% { background-color: blue; }
+        80% { background-color: green; }
+        100% { background-color: red; }
+    }
+
+    .cube2 {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        animation: textChange 6s infinite;
+    }
+
+    @keyframes textChange {
+        0%, 33.3% { content: "Hello"; }
+        33.3%, 66.6% { content: "Bye"; }
+        66.6%, 100% { content: "Hype"; }
+    }
+
+    .cube3 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation: jump 1s infinite;
+    }
+
+    @keyframes jump {
+        0%, 50%, 100% { top: 0; }
+        25%, 75% { top: -50px; }
+    }
+
+    .cube4 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation: jumpAndColorChange 3s infinite;
+    }
+
+    @keyframes jumpAndColorChange {
+        0%, 100% { top: 0; background-color: red; }
+        33% { top: -50px; background-color: yellow; }
+        66% { top: 0; background-color: orange; }
+    }
+
+    .cube5 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: relative;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .cube6 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation: spinAndColorChange 4s linear infinite;
+    }
+
+    @keyframes spinAndColorChange {
+        0% { transform: rotate(0deg); background-color: red; }
+        50% { transform: rotate(180deg); background-color: blue; }
+        100% { transform: rotate(360deg); background-color: green; }
+    }
+
+    .cube7 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: relative;
+        animation: run 2s linear infinite;
+    }
+
+    @keyframes run {
+        0% { left: 0; }
+        50% { left: 50%; }
+        100% { left: 0; }
+    }
+
+    .cube8 {
+        width: 100px;
+        height: 100px;
+        background-color: purple;
+        position: relative;
+        animation: somersault 2s linear infinite;
+    }
+
+    @keyframes somersault {
+        0% { transform: rotateX(0deg); }
+        100% { transform: rotateX(360deg); }
+    }
+
+
+
+
+
+
+
+    .container {
+        width: 200px;
+        height: 100px;
+        background-color: teal;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: stretchAndText 3s forwards;
+    }
+
+    .text {
+        display: none;
+    }
+
+    @keyframes stretchAndText {
+        0% { width: 100px; }
+        100% { width: 400px; }
+    }
+
+    .container:after {
+        content: "Thanks for watching";
+        display: block;
+        color: white;
+        font-size: 20px;
+    }
+
+    .cube10 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: relative;
+        animation: stretchAndColorChange 3s forwards;
+    }
+
+    @keyframes stretchAndColorChange {
+        0% { width: 100px; background-color: blue; }
+        100% { width: 200px; background-color: red; }
+    }
+
+
+
+
+</style>
+</head>
+<body>
+    <div class="cube"></div>
+    <div class="cube2"></div>
+    <div class="cube3"></div>
+    <div class="cube4"></div>
+    <div class="cube5"></div>
+    <div class="cube6"></div>
+    <div class="cube7"></div>
+    <div class="cube8"></div>
+    <div class="cube10"></div>
+
+
+
+
+    <div class="container">
+        <div class="text"></div>
+
+
+</body>
+</html>
